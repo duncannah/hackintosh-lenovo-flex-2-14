@@ -201,6 +201,16 @@
 					SERBVQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
+					<key>Name</key>
+					<string>com.apple.driver.AppleBacklight</string>
+					<key>Find</key>
+					<data>RiV1VCUwNHgA</data>
+					<key>Replace</key>
+					<data>RiV1VHh4eHgA</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -228,11 +238,15 @@
 			<key>NoOemTableId</key>
 			<true/>
 		</dict>
+		<key>SortedOrder</key>
+		<array>
+			<string>SSDT-PNLF.aml</string>
+		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 kext-dev-mode=1</string>
+		<string>dart=0 nv_disable=1 kext-dev-mode=1 -lilubetaall</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -365,8 +379,6 @@
 			<key>Enabled</key>
 			<false/>
 		</dict>
-		<key>Scan</key>
-		<true/>
 		<key>Theme</key>
 		<string>Nightwish</string>
 	</dict>
